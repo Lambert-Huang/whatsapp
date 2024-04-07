@@ -4,6 +4,8 @@ import SwiftUI
 @Reducer
 public struct AppLogic {
 	public init() {}
+  
+  @ObservableState
 	public struct State: Equatable {
 		public init() {}
 	}
