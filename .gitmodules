@@ -1,0 +1,9 @@
+[submodule "Packages/CupertinoPackage"]
+	path = Packages/CupertinoPackage
+	url = http://182.150.116.28:8232/project2c/ios/CupertinoPackage
+[submodule "Packages/CupertinoUtils"]
+	path = Packages/CupertinoUtils
+	url = http://182.150.116.28:8232/project2c/ios/CupertinoUtils
+[submodule "Packages/UIComponentPackage"]
+	path = Packages/UIComponentPackage
+	url = http://182.150.116.28:8232/project2c/ios/UIComponentPackage
