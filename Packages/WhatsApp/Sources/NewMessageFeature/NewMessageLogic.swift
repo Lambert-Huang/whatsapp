@@ -15,7 +15,7 @@ public struct NewMessageLogic {
   
   @ObservableState
   public struct State: Equatable {
-    
+    public init() {}
   }
   
   public enum Action {

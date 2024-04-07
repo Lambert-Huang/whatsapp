@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
       "identity" : "combine-schedulers",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/combine-schedulers",
@@ -16,6 +25,15 @@
       "state" : {
         "revision" : "8d33ffd6f74b3bcfc99af759d4204c6395a3f918",
         "version" : "3.2.1"
+      }
+    },
+    {
+      "identity" : "moyacore",
+      "kind" : "remoteSourceControl",
+      "location" : "http://182.150.116.28:8232/project2c/ios/MoyaCore.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "aabf74755660ad15f9ba827930187bef50ac64dc"
       }
     },
     {

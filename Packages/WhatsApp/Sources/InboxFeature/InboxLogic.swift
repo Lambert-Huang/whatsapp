@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import ComposableArchitecture
+import NavigationBarColorViewModifier
 
 @Reducer
 public struct InboxLogic {
@@ -15,7 +16,7 @@ public struct InboxLogic {
   
   @ObservableState
   public struct State: Equatable {
-    
+    public init() {}
   }
   
   public enum Action {
@@ -36,7 +37,56 @@ public struct InboxView: View {
   }
   public var body: some View {
     WithPerceptionTracking {
-      
+      ZStack(alignment: .bottomTrailing) {
+        List {
+          ForEach(0 ..< 5) { _ in
+            Text("test")
+          }
+        }
+        .listStyle(.plain)
+        
+        Button {
+          
+        } label: {
+          RoundedRectangle(cornerRadius: 10)
+            .fill(Color(.darkGray).gradient)
+            .frame(width: 50, height: 50)
+            .padding()
+            .overlay {
+              Image(systemName: "plus.bubble.fill")
+                .foregroundStyle(Color.white.gradient)
+            }
+        }
+      }
+      .toolbar {
+        ToolbarItem(placement: .topBarLeading) {
+          Text("WhatsApp")
+            .font(.title)
+            .fontWeight(.semibold)
+            .foregroundStyle(Color.white.gradient)
+            .navigationBarColor(backgroundColor: Color(.darkGray))
+        }
+        ToolbarItem(placement: .topBarTrailing) {
+          HStack(spacing: 24) {
+            Image(systemName: "camera")
+            Image(systemName: "magnifyingglass")
+            Image(systemName: "ellipsis")
+          }
+          .fontWeight(.semibold)
+          .foregroundStyle(Color.white.gradient)
+        }
+      }
     }
+  }
+}
+
+#Preview {
+  NavigationStack {
+    InboxView(
+      store: Store(
+        initialState: InboxLogic.State(),
+        reducer: InboxLogic.init
+      )
+    )
   }
 }
